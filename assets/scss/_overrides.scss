@@ -1,0 +1,58 @@
+// Modals
+
+
+
+.modal-backdrop {
+  background: #ffffff;
+  opacity: 0.8!important;
+}
+.modal-dialog {
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 600px;
+}
+
+.modal-content {
+  background-color: $t8s-attention-color;
+  color: #ffffff;
+  border-radius: 0;
+  border: none;
+  @include box-shadow(0 3px 9px rgba(0,0,0,.2));
+}
+.modal-header, .modal-footer{
+  border: none;
+}
+
+
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 15px;
+}
+
+@media screen and (max-width:767px){
+  .modal-dialog {
+    margin: 0 !important;
+    max-width: 991px!important;
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+}
+
+@media screen and (min-width:768px) {
+  .modal-backdrop {
+    background: #ffffff;
+    opacity: 0.5!important;
+  }
+  .modal-dialog {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

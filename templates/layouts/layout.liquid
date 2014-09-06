@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <!-- Title block allowing child pages to override -->
+        <title>{% block title %}Publishing{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+ <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    {{ "style.css" | asset_url | stylesheet_tag }}
+        <!-- Style block allowing child pages to inject their own styles -->
+        {% block styles %}{% endblock %}
+    </head>
+    <body>
+        {% include "navbar" %}
+            <!-- Content block, child page inject content -->
+            {% block content %}{% endblock %}
+        {% include "footer" %}
+        {% include "successModal" %}
+        <!-- Script block allowing child pages to inject their own scripts -->
+
+
+        {{ "jquery.min.js" | asset_url | script_tag }}
+        {{ "bootstrap.min.js" | asset_url | script_tag }}
+        {{ "bootstrapValidator.js" | asset_url | script_tag }}
+        {{ "ru_RU.js" | asset_url | script_tag }}
+        {{ "main.js" | asset_url | script_tag }}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
