@@ -156,6 +156,7 @@ footer {
 .s-intro {
   background-color: rgb(47, 78, 90);
   @extend .section-full;
+  background-image: url(../img/bg-typefaces.jpg);
   background-size: cover;
   padding-bottom: 2em!important;
 }
@@ -172,13 +173,13 @@ footer {
   margin-top: 2em;
 }
 .s-features__item {
-  @extend .col-md-4;
-  @extend .col-sm-6;
-  padding-bottom: 1em;
+  @extend .col-sm-3;
+  padding-bottom: 2em;
+  text-align: center;
 }
 .s-features__item__icon {
-  height: 50px;
-  width: 50px;
+  margin-bottom: 0.5em;
+  max-width: 120px;
 }
 .s-features__item__label {
 
@@ -190,8 +191,15 @@ footer {
 
 }
 
-.s-ideasfirst__row {
+.s-ideasfirst__item{
   @extend .row;
+  margin-top: 2em;
+}
+
+.s-ideasfirst__item__icon {
+  max-width: 70px;
+  padding-bottom: 0.5em;
+  margin: 0 auto;
 }
 
 
@@ -206,7 +214,7 @@ footer {
 // Adaptive section
 
 .s-adaptive {
-  background-color: rgb(118, 123, 125);
+  background-color: #25B7BD;
   @extend .section-full;
   padding-bottom: 3em!important;
   background-size: cover;
@@ -219,6 +227,7 @@ footer {
 .s-contact{
   @extend .container;
   @extend .section;
+  text-align: center;
 }
 
 

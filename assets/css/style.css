@@ -716,16 +716,16 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row, .s-features__row, .s-ideasfirst__row {
+.row, .s-features__row, .s-ideasfirst__item {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, .s-features__row:before, .s-ideasfirst__row:before, .row:after, .s-features__row:after, .s-ideasfirst__row:after {
+  .row:before, .s-features__row:before, .s-ideasfirst__item:before, .row:after, .s-features__row:after, .s-ideasfirst__item:after {
     content: " ";
     display: table; }
-  .row:after, .s-features__row:after, .s-ideasfirst__row:after {
+  .row:after, .s-features__row:after, .s-ideasfirst__item:after {
     clear: both; }
 
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .s-features__item, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .s-features__item, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .s-features__item, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -888,7 +888,7 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .s-features__item, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1 {
+  .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .s-features__item, .col-sm-2, .col-sm-1 {
     float: left; }
 
   .col-sm-1 {
@@ -897,7 +897,7 @@ pre {
   .col-sm-2 {
     width: 16.66667%; }
 
-  .col-sm-3 {
+  .col-sm-3, .s-features__item {
     width: 25%; }
 
   .col-sm-4 {
@@ -906,7 +906,7 @@ pre {
   .col-sm-5 {
     width: 41.66667%; }
 
-  .col-sm-6, .s-features__item {
+  .col-sm-6 {
     width: 50%; }
 
   .col-sm-7 {
@@ -1044,7 +1044,7 @@ pre {
   .col-sm-offset-12 {
     margin-left: 100%; } }
 @media (min-width: 992px) {
-  .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .s-features__item, .col-md-3, .col-md-2, .col-md-1 {
+  .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1 {
     float: left; }
 
   .col-md-1 {
@@ -1056,7 +1056,7 @@ pre {
   .col-md-3 {
     width: 25%; }
 
-  .col-md-4, .s-features__item {
+  .col-md-4 {
     width: 33.33333%; }
 
   .col-md-5 {
@@ -5208,6 +5208,7 @@ footer {
 
 .s-intro {
   background-color: #2f4e5a;
+  background-image: url(../img/bg-typefaces.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   padding-bottom: 2em !important; }
@@ -5216,17 +5217,29 @@ footer {
   margin-top: 2em; }
 
 .s-features__item {
-  padding-bottom: 1em; }
+  padding-bottom: 2em;
+  text-align: center; }
 
 .s-features__item__icon {
-  height: 50px;
-  width: 50px; }
+  margin-bottom: 0.5em;
+  max-width: 120px; }
+
+.s-ideasfirst__item {
+  margin-top: 2em; }
+
+.s-ideasfirst__item__icon {
+  max-width: 70px;
+  padding-bottom: 0.5em;
+  margin: 0 auto; }
 
 .s-adaptive {
-  background-color: #767b7d;
+  background-color: #25B7BD;
   padding-bottom: 3em !important;
   -webkit-background-size: cover;
   background-size: cover; }
+
+.s-contact {
+  text-align: center; }
 
 .section-full, .s-intro, .s-adaptive {
   padding: 3em 15px !important;
