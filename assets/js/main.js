@@ -13,23 +13,23 @@ $('.t8s-lead-form')
         var form = $(this)
         var btn = form.find('.t8s-lead-form__button');
         btn.button('loading'),
-        setTimeout(function () {
-            btn.button("reset");
-            $('#successModal').modal('toggle');
-            console.log(form.serialize());
-            form.clearForm();
-        }, 3e3)
-//            $.ajax({
-//                url: '/sendmail.php',
-//                crossDomain: false,
-//                type : 'POST',
-//                data: form.serialize(),
-//                success: function(){
-//                    $('#successModal').modal('toggle');
-//                    ga('send', 'event', 'button', 'click', form.data('label'));
-//                    form.clearForm();
-//                }
-//            })
+//        setTimeout(function () {
+//            btn.button("reset");
+//            $('#successModal').modal('toggle');
+//            console.log(form.serialize());
+//            form.clearForm();
+//        }, 3e3)
+            $.ajax({
+                url: '/mailer.php',
+                crossDomain: false,
+                type : 'POST',
+                data: form.serialize(),
+                success: function(){
+                    $('#successModal').modal('toggle');
+                    ga('send', 'event', 'button', 'click', form.data('label'));
+                    form.clearForm();
+                }
+            })
                 .always(function () {
                     btn.button('reset')
 
